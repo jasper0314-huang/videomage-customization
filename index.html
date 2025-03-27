@@ -214,16 +214,16 @@
     <div class="hero-body has-text-centered">
       <h2 class="title is-3 has-text-centered">Method</h2>
       <img src="static/images/overview.png" alt="VideoMage" class="center-image" style="max-width: 100%; height: auto;" />
-      <p class="has-text-centered has-text-justified" style="margin-bottom: -10px; line-height: 1.3;">
-        Overview of <b>VideoMage.</b> (a) VideoMage leverages LoRAs to learn visual appearance and <b>appearance-agnostic motion</b> (see Fig. 1) separately. (b) During inference, given a text prompt describing visual and motion concepts, our <b>Spatial-Temporal Collaborative Composition</b> (see Fig. 2) integrates multiple subject and motion LoRAs to generate videos with the desired visual and motion characteristics.
+      <p class="has-text-centered has-text-justified" style="margin-bottom: -10px; font-size: 1.2rem; line-height: 1.3;">
+        Overview of <b>VideoMage.</b> (a) VideoMage leverages LoRAs to learn visual appearance and <b style="color: orange;">appearance-agnostic motion</b> (see Fig. 1) separately. (b) During inference, given a text prompt describing visual and motion concepts, our <b style="color: DarkViolet;">Spatial-Temporal Collaborative Composition</b> (see Fig. 2) integrates multiple subject and motion LoRAs to generate videos with the desired visual and motion characteristics.
       </p>
     </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item has-text-centered">
           <!-- Your image here -->
           <img src="static/images/motion_learning.png" alt="Appearance-Agnostic Motion Learning" style="max-width: 50%; height: auto; margin-bottom: 10px;" />
-          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.0rem; line-height: 1.3;">
-            Figure 1. <b>Appearance-Agnostic Motion Learning.</b>
+          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.3;">
+            Figure 1. <b style="color: orange;">Appearance-Agnostic Motion Learning.</b>
             To disentangle motion patterns from visual appearance, we first learn each subject's static appearance via Textual Inversion.
             Then, we apply <i>negative</i> classifier-free guidance to eliminate appearance information during motion learning, ensuring the motion LoRA captures only motion dynamics.
           </p>
@@ -231,8 +231,8 @@
         <div class="item has-text-centered">
           <!-- Your image here -->
           <img src="static/images/composition.png" alt="Spatial-Temporal Collaborative Composition" style="margin-bottom: 10px;" />
-          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.0rem; line-height: 1.3;">
-            Figure 2. <b>Spatial-Temporal Collaborative Composition.</b>
+          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.3;">
+            Figure 2. <b style="color: DarkViolet;">Spatial-Temporal Collaborative Composition.</b>
             During inference, we first (a) fuse multiple subject LoRAs into a single LoRA.
             With the fused subject LoRA and the motion LoRA, we propose (b) <b>Spatial-Temporal Collaborative Sampling (SCS)</b> scheme to independently sample from subject and motion branches. To encourage alignment during early timesteps, we introduce a collaborative guidance mechanism, where spatial and temporal attention maps from subject and motion branches are utilized to refine each other's input latents, ensuring visual and temporal coherence.
           </p>
@@ -256,10 +256,10 @@
             type="video/mp4">
           </video>
         </div>
-        <div class="item item-video2" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
-          <video poster="" id="qualitative-video2" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+        <div class="item item-video5" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+          <video poster="" id="qualitative-video5" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
             <!-- Your video file here -->
-            <source src="static/videos/qualitative_results2.mp4"
+            <source src="static/videos/qualitative_results5.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -267,6 +267,27 @@
           <video poster="" id="qualitative-video3" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
             <!-- Your video file here -->
             <source src="static/videos/qualitative_results3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+          <video poster="" id="qualitative-video6" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+            <!-- Your video file here -->
+            <source src="static/videos/qualitative_results6.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+          <video poster="" id="qualitative-video2" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+            <!-- Your video file here -->
+            <source src="static/videos/qualitative_results2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+          <video poster="" id="qualitative-video4" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+            <!-- Your video file here -->
+            <source src="static/videos/qualitative_results4.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -284,25 +305,25 @@
     <div class="container has-text-centered">
       <div id="comparison-carousel" class="carousel results-carousel">
         <div class="item item-video1" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
-          <video poster="" id="comparison-video1" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+          <video poster="" id="comparison-video1" autoplay muted loop height="100%" style="max-width: 65%; height: auto; margin-bottom: 20px; margin-top: -15px;">
             <!-- Your video file here -->
             <source src="static/videos/qualitative_comparison1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video2" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
-          <video poster="" id="comparison-video2" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+          <video poster="" id="comparison-video2" autoplay muted loop height="100%" style="max-width: 65%; height: auto; margin-bottom: 20px; margin-top: -15px;">
             <!-- Your video file here -->
             <source src="static/videos/qualitative_comparison2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video3" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
-          <video poster="" id="comparison-video3" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+          <video poster="" id="comparison-video3" autoplay muted loop height="100%" style="max-width: 65%; height: auto; margin-bottom: 20px; margin-top: -15px;">
             <!-- Your video file here -->
             <source src="static/videos/qualitative_comparison3.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video4" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
-          <video poster="" id="comparison-video4" autoplay muted loop height="100%" style="max-width: 100%; height: auto; margin-bottom: 20px; margin-top: -15px;">
+          <video poster="" id="comparison-video4" autoplay muted loop height="100%" style="max-width: 65%; height: auto; margin-bottom: 20px; margin-top: -15px;">
             <!-- Your video file here -->
             <source src="static/videos/qualitative_comparison4.mp4" type="video/mp4">
           </video>
