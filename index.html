@@ -214,12 +214,18 @@
     <div class="hero-body has-text-centered">
       <h2 class="title is-3 has-text-centered">Method</h2>
       <img src="static/images/overview.png" alt="VideoMage" class="center-image" style="max-width: 100%; height: auto;" />
-      <p class="has-text-centered has-text-justified" style="margin-bottom: -10px; font-size: 1.2rem; line-height: 1.3;">
+      <p class="has-text-centered has-text-justified" style="margin-bottom: -30px; font-size: 1.2rem; line-height: 1.3;">
         Overview of <b>VideoMage.</b> (a) VideoMage leverages LoRAs to learn visual appearance and <b style="color: orange;">appearance-agnostic motion</b> (see Fig. 1) separately. (b) During inference, given a text prompt describing visual and motion concepts, our <b style="color: DarkViolet;">Spatial-Temporal Collaborative Composition</b> (see Fig. 2) integrates multiple subject and motion LoRAs to generate videos with the desired visual and motion characteristics.
       </p>
     </div>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item has-text-centered">
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <div id="comparison-carousel" class="carousel results-carousel">
+        <div class="item">
           <img src="static/images/motion_learning.png" alt="Appearance-Agnostic Motion Learning" style="max-width: 50%; height: auto; margin-bottom: 10px;" />
           <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.3;">
             Figure 1. <b style="color: orange;">Appearance-Agnostic Motion Learning.</b>
@@ -227,7 +233,7 @@
             Then, we apply <i>negative</i> classifier-free guidance to eliminate appearance information during motion learning, ensuring the motion LoRA captures only motion dynamics.
           </p>
         </div>
-        <div class="item has-text-centered">
+        <div class="item item-video2" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
           <img src="static/images/composition.png" alt="Spatial-Temporal Collaborative Composition" style="margin-bottom: 10px;" />
           <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.3;">
             Figure 2. <b style="color: DarkViolet;">Spatial-Temporal Collaborative Composition.</b>
@@ -236,10 +242,9 @@
           </p>
         </div>
       </div>
+    </div>
   </div>
 </section>
-<!-- End teaser video -->
-
 
 <!-- Qualitative Results carousel -->
 <section class="hero is-small is-light">
