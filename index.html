@@ -213,16 +213,16 @@
   <div class="container is-max-desktop">
     <div class="hero-body has-text-centered">
       <h2 class="title is-3 has-text-centered">Method</h2>
-      <img src="static/images/overview.png" alt="VideoMage" class="center-image" style="max-width: 85%; height: auto;" />
-      <p class="has-text-centered has-text-justified" style="margin-bottom: -10px; line-height: 1.25;">
+      <img src="static/images/overview.png" alt="VideoMage" class="center-image" style="max-width: 100%; height: auto;" />
+      <p class="has-text-centered has-text-justified" style="margin-bottom: -10px; line-height: 1.3;">
         Overview of <b>VideoMage.</b> (a) VideoMage leverages LoRAs to learn visual appearance and <b>appearance-agnostic motion</b> (see Fig. 1) separately. (b) During inference, given a text prompt describing visual and motion concepts, our <b>Spatial-Temporal Collaborative Composition</b> (see Fig. 2) integrates multiple subject and motion LoRAs to generate videos with the desired visual and motion characteristics.
       </p>
     </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item has-text-centered">
           <!-- Your image here -->
-          <img src="static/images/motion_learning.png" alt="Appearance-Agnostic Motion Learning" style="max-width: 48%; height: auto; margin-bottom: 10px;" />
-          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.0rem; line-height: 1.25;">
+          <img src="static/images/motion_learning.png" alt="Appearance-Agnostic Motion Learning" style="max-width: 50%; height: auto; margin-bottom: 10px;" />
+          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.0rem; line-height: 1.3;">
             Figure 1. <b>Appearance-Agnostic Motion Learning.</b>
             To disentangle motion patterns from visual appearance, we first learn each subject's static appearance via Textual Inversion.
             Then, we apply <i>negative</i> classifier-free guidance to eliminate appearance information during motion learning, ensuring the motion LoRA captures only motion dynamics.
@@ -231,7 +231,7 @@
         <div class="item has-text-centered">
           <!-- Your image here -->
           <img src="static/images/composition.png" alt="Spatial-Temporal Collaborative Composition" style="margin-bottom: 10px;" />
-          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.0rem; line-height: 1.25;">
+          <p class="subtitle has-text-justified" style="margin-bottom: 10px; font-size: 1.0rem; line-height: 1.3;">
             Figure 2. <b>Spatial-Temporal Collaborative Composition.</b>
             During inference, we first (a) fuse multiple subject LoRAs into a single LoRA.
             With the fused subject LoRA and the motion LoRA, we propose (b) <b>Spatial-Temporal Collaborative Sampling (SCS)</b> scheme to independently sample from subject and motion branches. To encourage alignment during early timesteps, we introduce a collaborative guidance mechanism, where spatial and temporal attention maps from subject and motion branches are utilized to refine each other's input latents, ensuring visual and temporal coherence.
